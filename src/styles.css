@@ -52,10 +52,12 @@ a {
   margin-bottom: 30px;
 }
 
-.footer {
+footer {
   font-weight: normal;
   font-size: 12px;
   font-style: italic;
+  text-align: center;
+  color: grey;
 }
 
 .week-day {
