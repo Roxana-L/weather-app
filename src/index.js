@@ -69,7 +69,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-city").value;
-  searchCity(city);
+  searchCity(city.value);
 }
 
 function displayCurrentLocationTemperature(response) {
@@ -105,7 +105,7 @@ let now = new Date();
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = formatDate(currentTime);
 
-let form = document.querySelector(".search-form");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 searchCity("London");
