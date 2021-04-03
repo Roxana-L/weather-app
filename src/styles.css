@@ -35,18 +35,16 @@ footer {
   text-align: center;
 }
 
-.weather-app-wrapper {
+.weather-app {
   background: linear-gradient(
     89.4deg,
     rgb(74, 77, 103) -4.3%,
     rgb(119, 125, 165) 102.1%
   );
-  margin: 40px auto;
-  max-width: 700px;
-}
-.weather-app {
   border: 1px solid grey;
   border-radius: 10px;
+  margin: 40px auto;
+  max-width: 700px;
   padding: 20px;
 }
 
