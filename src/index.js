@@ -64,9 +64,9 @@ function displayForecast(response) {
               <div class="temperature-forecast">
                 <span class="weather-forecast-max">${Math.round(
                   forecastDay.temp.max
-                )}°</span>|<span
+                )} °</span>|<span
                   class="weather-forecast-min"
-                  >${Math.round(forecastDay.temp.min)}°</span
+                  > ${Math.round(forecastDay.temp.min)} °</span
                 >
               </div>
             </div>`;
@@ -120,36 +120,11 @@ function handleSubmit(event) {
   searchCity(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let now = new Date();
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = formatDate(currentTime);
 
-let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("London");
