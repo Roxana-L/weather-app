@@ -70,19 +70,20 @@ footer {
   font-weight: 400px;
 }
 
-.week-day {
-  font-size: 20px;
-  font-weight: 400;
-}
-.weather-icon {
-  font-size: 25px;
-}
-
-.temperature-forecast {
-  font-size: 20px;
-}
-
 .weather-temperature .active {
   color: white;
   cursor: default;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.week-day {
+  font-size: 20px;
+}
+
+.temperature-forecast {
+  font-size: 16px;
 }
